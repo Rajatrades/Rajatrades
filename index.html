@@ -1,178 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajatrades | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        :root {
-            --geist-foreground: #fff;
-            --geist-background: #000;
-            --accents-1: #111;
-            --accents-2: #333;
-            --accents-8: #888;
-            --geist-success: #0070f3;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAJA | Student Of The Market</title>
 
-        * { box-sizing: border-box; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            background-color: var(--geist-background);
-            color: var(--geist-foreground);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 80px 20px;
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        /* Vercel Style Header */
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #111827 0%, #000000 45%);
+      overflow-x: hidden;
+    }
 
-        .brand {
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: -0.05em;
-            margin: 0;
-            color: #fff;
-        }
+    .glass {
+      background: rgba(17, 17, 17, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 0 30px rgba(255,255,255,0.04);
+    }
 
-        .tagline {
-            color: var(--accents-8);
-            font-size: 1.1rem;
-            margin-top: 10px;
-        }
+    .social-btn {
+      transition: 0.3s ease;
+    }
 
-        /* Social Tabs - Minimalist */
-        .tabs {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 50px;
-        }
+    .social-btn:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.3);
+      box-shadow: 0 0 20px rgba(255,255,255,0.12);
+    }
 
-        .tab-item {
-            border: 1px solid var(--accents-2);
-            background: var(--geist-background);
-            color: var(--geist-foreground);
-            padding: 8px 16px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s ease;
-        }
+    .card-hover {
+      transition: 0.35s ease;
+    }
 
-        .tab-item:hover {
-            background: var(--geist-foreground);
-            color: var(--geist-background);
-        }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,0.18);
+      box-shadow: 0 0 40px rgba(255,255,255,0.08);
+    }
 
-        /* Referral Table - Vercel Dashboard Look */
-        .container {
-            width: 100%;
-            max-width: 650px;
-            border: 1px solid var(--accents-2);
-            border-radius: 8px;
-            background: var(--accents-1);
-        }
-
-        .row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 24px;
-            border-bottom: 1px solid var(--accents-2);
-        }
-
-        .row:last-child { border-bottom: none; }
-
-        .name-stack {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .platform {
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .url {
-            font-size: 0.8rem;
-            color: var(--accents-8);
-        }
-
-        .code-box {
-            font-family: monospace;
-            background: #000;
-            border: 1px solid var(--accents-2);
-            padding: 4px 10px;
-            border-radius: 4px;
-            color: var(--geist-success);
-            font-weight: bold;
-        }
-
-        .action-link {
-            text-decoration: none;
-            color: var(--geist-foreground);
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 6px 12px;
-            border: 1px solid var(--accents-2);
-            border-radius: 5px;
-            transition: 0.2s;
-        }
-
-        .action-link:hover {
-            border-color: var(--geist-foreground);
-        }
-
-        @media (max-width: 600px) {
-            .tabs { flex-direction: column; width: 100%; max-width: 300px; }
-            .brand { font-size: 2.5rem; }
-            .row { flex-direction: column; gap: 15px; align-items: flex-start; }
-        }
-    </style>
+    .btn-glow:hover {
+      box-shadow: 0 0 25px rgba(255,255,255,0.18);
+    }
+  </style>
 </head>
-<body>
 
-    <div class="header">
-        <h1 class="brand">Rajatrades</h1>
-        <p class="tagline">Trading infrastructure & referral network.</p>
+<body class="text-white min-h-screen flex items-center justify-center px-5 py-12">
+
+  <div class="w-full max-w-5xl">
+
+    <!-- TOP -->
+    <div class="text-center">
+
+      <!-- LOGO -->
+      <div class="w-24 h-24 mx-auto rounded-3xl glass flex items-center justify-center text-4xl font-black">
+        R
+      </div>
+
+      <!-- TAG -->
+      <div class="inline-block mt-5 px-5 py-2 rounded-full glass text-sm tracking-[3px] uppercase text-gray-300">
+        Student Of The Market
+      </div>
+
+      <!-- NAME -->
+      <h1 class="text-6xl md:text-7xl font-extrabold mt-6 tracking-tight">
+        RAJA
+      </h1>
+
+      <!-- SUBTEXT -->
+      <p class="text-gray-400 text-lg mt-3">
+        Documentary | Betting on Highs & Lows
+      </p>
+
+      <!-- SOCIALS -->
+      <div class="flex justify-center gap-4 mt-10 flex-wrap">
+
+        <!-- TWITTER -->
+        <a href="https://x.com/mrraja1326?s=21"
+           target="_blank"
+           class="social-btn glass w-16 h-16 rounded-2xl flex items-center justify-center text-2xl">
+          𝕏
+        </a>
+
+        <!-- INSTAGRAM -->
+        <a href="https://www.instagram.com/rajatrades.in?igsh=bzR6a3RxeTBtdTF2&utm_source=qr"
+           target="_blank"
+           class="social-btn glass w-16 h-16 rounded-2xl flex items-center justify-center text-2xl">
+          📸
+        </a>
+
+        <!-- YOUTUBE -->
+        <a href="https://youtube.com/@rajatrades?si=K52rtonbheLOrvGH"
+           target="_blank"
+           class="social-btn glass w-16 h-16 rounded-2xl flex items-center justify-center text-2xl">
+          ▶
+        </a>
+
+      </div>
     </div>
 
-    <div class="tabs">
-        <a href="https://x.com/mrraja1326?s=21" class="tab-item" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
-        <a href="https://www.instagram.com/rajatrades.in" class="tab-item" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://youtube.com/@rajatrades" class="tab-item" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-    </div>
+    <!-- CARDS -->
+    <div class="grid md:grid-cols-2 gap-8 mt-20">
 
-    <div class="container">
-        <!-- Row 1 -->
-        <div class="row">
-            <div class="name-stack">
-                <span class="platform">Lucid Trading</span>
-                <span class="url">lucidtrading.com</span>
-            </div>
-            <div class="code-box">RAJA</div>
-            <a href="https://lucidtrading.com/ref/rajatrades" class="action-link" target="_blank">Visit Site</a>
+      <!-- LUCID TRADING -->
+      <div class="glass rounded-[32px] p-8 card-hover">
+
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-3xl font-bold">Lucid Trading</p>
+            <p class="text-gray-400 mt-1 uppercase tracking-widest text-sm">
+              Tools & Prop
+            </p>
+          </div>
+
+          <div class="px-4 py-2 rounded-full border border-white/20 text-sm font-semibold text-gray-300">
+            TOP PICK
+          </div>
         </div>
-        <!-- Row 2 -->
-        <div class="row">
-            <div class="name-stack">
-                <span class="platform">Tradeify</span>
-                <span class="url">tradeify.co</span>
-            </div>
-            <div class="code-box">RAJA</div>
-            <a href="https://tradeify.co/?ref=RAJA" class="action-link" target="_blank">Visit Site</a>
+
+        <div class="mt-10">
+          <h2 class="text-5xl font-extrabold leading-tight">
+            Pro Tools
+          </h2>
+
+          <p class="text-gray-400 mt-4 text-lg">
+            Professional dashboard for serious traders.
+          </p>
         </div>
+
+        <div class="border-t border-white/10 my-8"></div>
+
+        <ul class="space-y-4 text-gray-300 text-lg">
+          <li>✔ Advanced Analytics</li>
+          <li>✔ Risk Management</li>
+          <li>✔ Professional Interface</li>
+        </ul>
+
+        <div class="glass rounded-3xl p-6 mt-10">
+
+          <div class="flex items-center justify-between">
+            <span class="text-gray-400">Code:</span>
+            <span class="font-bold tracking-[3px] text-xl">
+              RAJA
+            </span>
+          </div>
+
+          <a href="https://lucidtrading.com/ref/rajatrades"
+             target="_blank"
+             class="btn-glow mt-6 w-full bg-white text-black font-bold py-4 rounded-2xl flex items-center justify-center text-lg transition">
+            Get Access
+          </a>
+
+        </div>
+      </div>
+
+      <!-- TRADEIFY -->
+      <div class="glass rounded-[32px] p-8 card-hover">
+
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-3xl font-bold">Tradeify</p>
+            <p class="text-gray-400 mt-1 uppercase tracking-widest text-sm">
+              Prop Firm
+            </p>
+          </div>
+
+          <div class="px-4 py-2 rounded-full border border-white/20 text-sm font-semibold text-gray-300">
+            FUNDED
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <h2 class="text-5xl font-extrabold leading-tight">
+            Get Funded
+          </h2>
+
+          <p class="text-gray-400 mt-4 text-lg">
+            Start your funded trading journey today.
+          </p>
+        </div>
+
+        <div class="border-t border-white/10 my-8"></div>
+
+        <ul class="space-y-4 text-gray-300 text-lg">
+          <li>✔ Straight To Funded</li>
+          <li>✔ High Leverage</li>
+          <li>✔ Fast Payouts</li>
+        </ul>
+
+        <div class="glass rounded-3xl p-6 mt-10">
+
+          <div class="flex items-center justify-between">
+            <span class="text-gray-400">Code:</span>
+            <span class="font-bold tracking-[3px] text-xl">
+              RAJA
+            </span>
+          </div>
+
+          <a href="https://tradeify.co/?ref=RAJA"
+             target="_blank"
+             class="btn-glow mt-6 w-full bg-white text-black font-bold py-4 rounded-2xl flex items-center justify-center text-lg transition">
+            Claim Offer
+          </a>
+
+        </div>
+      </div>
+
     </div>
+
+  </div>
 
 </body>
 </html>
