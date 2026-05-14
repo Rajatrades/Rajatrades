@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajatrades | Links</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #161616;
+            --accent-color: #00d4ff;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+            --border-glow: rgba(0, 212, 255, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Social Tabs Section */
+        .social-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-tab {
+            background: var(--card-bg);
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .social-tab:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        /* Referral Table Section */
+        .table-container {
+            width: 100%;
+            max-width: 800px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #222;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: #1f1f1f;
+            padding: 18px;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 20px;
+            border-bottom: 1px solid #222;
+        }
+
+        .platform-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .promo-code {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent-color);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-weight: bold;
+            border: 1px dashed var(--accent-color);
+        }
+
+        .btn-link {
+            background: var(--text-main);
+            color: black;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn-link:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 600px) {
+            .social-tab { width: 100%; justify-content: center; }
+            th:nth-child(2), td:nth-child(2) { display: none; } /* Hide code column on tiny phones if needed */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Rajatrades</h1>
+        <p style="color: var(--text-dim);">Trading Resources & Socials</p>
+    </div>
+
+    <!-- Social Media Tabs -->
+    <div class="social-container">
+        <a href="https://x.com/mrraja1326?s=21" class="social-tab" target="_blank">
+            <i class="fab fa-x-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/rajatrades.in" class="social-tab" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://youtube.com/@rajatrades" class="social-tab" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+    </div>
+
+    <!-- Referral Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Platform</th>
+                    <th>Referral Code</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="platform-name">Lucid Trading</td>
+                    <td><span class="promo-code">RAJA</span></td>
+                    <td><a href="https://lucidtrading.com/ref/rajatrades" class="btn-link" target="_blank">Join Now</a></td>
+                </tr>
+                <tr>
+                    <td class="platform-name">Tradeify</td>
+                    <td><span class="promo-code">RAJA</span></td>
+                    <td><a href="https://tradeify.co/?ref=RAJA" class="btn-link" target="_blank">Join Now</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer style="margin-top: 60px; color: #444; font-size: 0.8rem;">
+        &copy; 2024 Rajatrades. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
